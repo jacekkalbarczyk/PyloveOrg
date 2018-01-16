@@ -6,13 +6,17 @@ class Czas():
         self.mins = mins
         self.sec = sec
 
-#    def __str__(self):
-#       return '<zeg h={}, m={}, s={}>'.format(self.hour, self.mins, self.sec)
-#
     def __str__(self):
+       return '<zeg h={}, m={}, s={}>'.format(self.hour, self.mins, self.sec)
+
+
+cz = Czas(hour=9, mins=10, sec=20)
+print(cz.__str__())
+
+"""    def __str__(self):
         temp = "{} ".format(self._get_name())
         for atr in dir(self):
-            if not atr.startswith('_') and not callable(self, atr):
+            if not atr.startswith('_') and not callable(atr):
                 temp += "{}={} ".format(atr,getattr(self, atr))
         return temp
 
@@ -21,6 +25,13 @@ class Czas():
     def _get_name(cls):
         return cls.__name__
 
+
+cz = Czas(hour=9, mins=10, sec=20)
+prr = cz.__str__()
+print(prr)"""
+#for el in dir(cz):
+    #if not callable(el):
+#        print(el)
 """class Zegar(Czas):
     def __init__(self, format_czasu, *args, **kwargs):
         super().__init__(*args, **kwargs)

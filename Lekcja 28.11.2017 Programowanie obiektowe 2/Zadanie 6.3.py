@@ -10,7 +10,7 @@ class Zegar(Czas):
         self.format_czasu = format_czasu
 
 class DokladnyZegar(Zegar):
-    def __init__(self, *args, ms=0, **kwargs):  #WAŻNE: kolejność przekazywania argumentów 1. argumenty pozycyjne
+    def __init__(self, *args, ms=0, **kwargs):  #WAŻNE: kolejność przekazywania argumentów 1. argumenty pozycyjne 2. argumenty słownikowe
         super().__init__(*args, **kwargs)
         self.ms = ms
 

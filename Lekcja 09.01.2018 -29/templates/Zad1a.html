@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Przelew</title>
+</head>
+<body>
+    Twój stan konta: {{ stan_konta }}<br>
+    Lista przelewów<br>
+
+    {% if przelewy %}
+        <ul>
+            {% for przelew in przelewy %}
+                <li>{{ przelew['nr_konta'] }}: {{ przelew['kwota']}} </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        Brak przelewów
+    {% endif %}
+
+
+
+    <form action ="/konto" method="post">
+        Podaj konto docelowe:
+        <input type="text" name="konto_docelowe"><br>
+        Kwota:
+        <input type="text" name="kwota">
+        <button type="submit">Dodaj</button>
+    </form>
+
+
+</body>
+</html>
