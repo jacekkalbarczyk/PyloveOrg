@@ -6,3 +6,15 @@ Przydatny operator: % (modulo)
 Przydatna informacja: alfabet łaciński ma 26 liter
 
 """
+
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+@app.route("/", methods=['GET', 'POST'])
+def cezar_encrypt():
+    content = 'Kontent'
+
+    return render_template('Cezar.html', encrypted_text=content)
+
+app.run(debug=True)

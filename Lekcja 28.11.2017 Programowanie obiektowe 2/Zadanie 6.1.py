@@ -4,7 +4,7 @@ class Czas():
         self.mins = mins
         self.sec = sec
 
-czas = Czas(12,6,9)
+czas = Czas(12, 6, 9)
 print(czas.hour)
 print(czas.mins)
 print(czas.sec)
@@ -16,5 +16,4 @@ print(czas.sec)
         print(self.hour)
 
 k = {'hour' : 9.00, 'mins' : 23 , 'sec' : 12}
-f = Czas(**k)
-"""
+f = Czas(**k)"""

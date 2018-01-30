@@ -9,3 +9,24 @@ input: "2 PLN to USD" output: "2000 USD"
 input "15 USD to PLN" output: "0.015 PLN"
 
 """
+
+kurs = {
+    'USD': 1000,
+    'EURO': 4505,
+    'JPY': 100
+}
+
+#import pdb; pdb.set_trace()
+
+def convert_currency(currency_string_in = ''):
+    value_from, currency_to = currency_string_in.split(' to ')
+    value_from, currency_from = value_from.split(' ')
+    import pdb; pdb.set_trace()
+    pdb.set_trace()
+
+    print(value_from)
+    print(currency_from)
+    print(currency_to)
+
+convert_currency('2 PLN to USD')
+
